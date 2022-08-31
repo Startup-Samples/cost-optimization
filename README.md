@@ -69,7 +69,26 @@ Control tower?
 
 
 
-# Services
+# AWS Product and Services
+
+## Data Transfer Out
+
+Avoid the anti pattern of inter service communication going out to the internet and coming back in. Use Gateway endpoints! They are free. 
+https://docs.aws.amazon.com/vpc/latest/privatelink/gateway-endpoints.html
+
+For services other than S3 and DynamoDB you need an interface endpoint.
+https://docs.aws.amazon.com/vpc/latest/privatelink/aws-services-privatelink-support.html
+
+https://aws.amazon.com/privatelink/pricing/
+Min charge is 0.013 * 730 = $9.49
+And then $0.01 / PB
+
+Look at this if your DTO for interservice communication is higher than this.
+
+It's important to understand what charges you incur for data transfer. This blog explores data transfer costs in relation to RDS. It's worth noting that aside from removing undifferentiated heavy lifting, using managed services also exempts you from certain data transfer charges within a region.
+https://aws.amazon.com/blogs/architecture/exploring-data-transfer-costs-for-aws-managed-databases/
+
+
 
 ## DynamoDB
 
@@ -83,10 +102,35 @@ Here's a blog post describing how you can migrate your Amazon EBS volumes from g
 
 ## EC2
 
+Deploy ready to use Instance Scheduler, allowing you to start and stop instances on a schedule to help save costs.
+https://aws.amazon.com/solutions/implementations/instance-scheduler/
+
+Consider alternate processors  (often 10% cheaper)
+https://aws.amazon.com/ec2/amd/
+
+ARM based (up to 40% better price over performance.)  
+https://aws.amazon.com/ec2/graviton/
+
+
 
 ## ECS
 ECS Fargate is a highly recommended way for startups to deploy their applications as it  removes undifferentiated heavy lifting of managing instances. This blog post is a cost optimization checklist to help you optimize on cost.
 https://aws.amazon.com/blogs/containers/cost-optimization-checklist-for-ecs-fargate/
+
+
+To further optimize you can use Fargate spot, but you need to architect for handling the interruptions if the computer resources get reclaimed.  
+This japanese blog post describes how to do that.
+https://aws.amazon.com/blogs/containers/graceful-shutdowns-with-ecs/  
+[JP version]
+https://aws.amazon.com/jp/blogs/news/graceful-shutdowns-with-ecs/
+
+
+Container insights is super helpful for gaining visiblity into what your containers are doing. This blog introduces the product and what you can do with it
+https://aws.amazon.com/blogs/mt/introducing-container-insights-for-amazon-ecs/
+
+
+For a full list of Amazon ECS Container Insights metrics, see Amazon ECS Container Insights Metrics https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-metrics-ECS.html
+
 
 
 ## EKS
@@ -103,11 +147,32 @@ https://aws.amazon.com/blogs/containers/cost-optimization-for-kubernetes-on-aws/
 
 These plugins will help give visibility into your costs
 https://github.com/hjacobs/kube-resource-report  
+
+
+
+another helpful tool for cost visibility is [Kubecost](https://github.com/kubecost/kubectl-cost). Kubecost enables users to view costs broken down by Kubernetes resources including pods, nodes, namespaces, labels, and more. 
+https://aws.amazon.com/blogs/containers/aws-and-kubecost-collaborate-to-deliver-cost-monitoring-for-eks-customers/
+
+use it in conjunction with 
 https://github.com/kubecost/cost-model  
+
+
+AWS also has cluster level cost allocation tagging.
+https://aws.amazon.com/about-aws/whats-new/2022/08/amazon-eks-cluster-level-cost-allocation-tagging/  
+
+[JP version]
+https://aws.amazon.com/jp/about-aws/whats-new/2022/08/amazon-eks-cluster-level-cost-allocation-tagging/
+
 
 This plugin is used to scale in and out the deployments based on time of day. This can result in significant cost-savings when there are many deployments that only need to be available during business hours.
 https://github.com/hjacobs/kube-downscaler
 
+
+
+
+## Graviton
+
+github graviton link
 
 
 ## RDS
@@ -144,3 +209,9 @@ The catch is if AWS needs that spare capacity, you will receive a 2 min warning 
 
 To learn how you might take advantage of this, you can try yourself in this workshop:
 https://ec2spotworkshops.com/
+
+
+# Other Resources
+
+Workshops and documentation on various topics.
+https://trailblazing.report/costoptimization.html
