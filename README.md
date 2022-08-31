@@ -7,7 +7,15 @@ We hope this proves useful as you navigate the various options available to you 
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Contents
 
+- [Useful Tools](#useful-tools)
+  - [AWS Budgets](#aws-budgets)
+  - [Cost Explorer](#cost-explorer)
+  - [Trusted Advisor](#trusted-advisor)
+  - [Anomaly detection?](#anomaly-detection)
+  - [AWS Organizations](#aws-organizations)
+  - [Tagging](#tagging)
 - [No Effort Options](#no-effort-options)
+  - [Reserved Instances](#reserved-instances)
   - [Savings Plans](#savings-plans)
 - [Services](#services)
   - [DynamoDB](#dynamodb)
@@ -26,8 +34,35 @@ We hope this proves useful as you navigate the various options available to you 
 <br>
 <br>
 
+# Useful Tools
+
+## AWS Budgets
+
+## Cost Explorer
+
+## Trusted Advisor
+
+## Anomaly detection?
+
+## AWS Organizations
+
+Account setup.  
+Control tower?
+
+
+
+## Tagging
+
+
+
+
+
+
+
 # No Effort Options
 
+
+## Reserved Instances
 
 ## Savings Plans
 
