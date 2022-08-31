@@ -1,7 +1,7 @@
 # AWS Cost Optimization Resources for Startups
-Welcome. This reference has been prepared by Solutions Architects at AWS to help Startups easily find additional resources that provide specific guidance on various techniques for effective cost optimization.  
+Welcome. This reference has been prepared by Startup Solution Architects at AWS to help Startups easily find additional resources that provide specific guidance on various techniques for effective cost optimization.  
 
-We hope this proves useful as you navigate the various options available to you for maximizing the value you can get out of running on AWS. As always, should you have questions on anything, please don't hesitate to contact your local startup team. you can also email <sup-apj@amazon.com>
+We hope this proves useful as you navigate the various options available to you for maximizing the value you can get out of running on AWS. As always, should you have questions on anything, please don't hesitate to contact your local startup team. you can also email ~~<sup-apj@amazon.com>~~
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
