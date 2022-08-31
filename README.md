@@ -9,7 +9,6 @@ We hope this proves useful as you navigate the various options available to you 
 
 - [No Effort Options](#no-effort-options)
   - [Savings Plans](#savings-plans)
-  - [Spot](#spot)
 - [Services](#services)
   - [DynamoDB](#dynamodb)
   - [EBS](#ebs)
@@ -18,6 +17,7 @@ We hope this proves useful as you navigate the various options available to you 
   - [EKS](#eks)
   - [RDS](#rds)
   - [S3](#s3)
+  - [Spot](#spot)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
   
