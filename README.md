@@ -31,14 +31,7 @@ We hope this proves useful as you navigate the various options available to you 
 
 ## Savings Plans
 
-## Spot
-AWS Spot Instances are an amazing option allowing you to take advantage of spare capacity in AWS datacenters to receive up to 90% discounts on your instances. You can learn more here 
-[https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
 
-The catch is if AWS needs that spare capacity, you will receive a 2 min warning before your instance is reclaimed. 
-
-To learn how you might take advantage of this, you can try yourself in this workshop:
-https://ec2spotworkshops.com/
 
 
 # Services
@@ -106,3 +99,13 @@ This workshop walks you through S3 Cost optimization tips: https://catalog.us-ea
 
 
 This blog post will outline how you can optimize for both predictable and dynamic access patterns - https://aws.amazon.com/blogs/storage/amazon-s3-cost-optimization-for-predictable-and-dynamic-access-patterns/
+
+
+## Spot
+AWS Spot Instances are an amazing option allowing you to take advantage of spare capacity in AWS datacenters to receive up to 90% discounts on your instances. Spot is available to use with EC2 instances directly and also with ECS and EKS. You can learn more here 
+[https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
+
+The catch is if AWS needs that spare capacity, you will receive a 2 min warning before your instance is reclaimed. 
+
+To learn how you might take advantage of this, you can try yourself in this workshop:
+https://ec2spotworkshops.com/
