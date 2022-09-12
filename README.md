@@ -17,15 +17,24 @@ We hope this proves useful as you navigate the various options available to you 
 - [No Effort Options](#no-effort-options)
   - [Reserved Instances](#reserved-instances)
   - [Savings Plans](#savings-plans)
-- [Services](#services)
+- [AWS Product and Services](#aws-product-and-services)
+  - [Data Transfer Out](#data-transfer-out)
+    - [Analyze  Data Transfer Costs using Cost Explorer](#analyze--data-transfer-costs-using-cost-explorer)
+    - [Use Private IP for Internal Services Communication](#use-private-ip-for-internal-services-communication)
+    - [Consider using CloudFront to reduce Data Transfer Out Costs](#consider-using-cloudfront-to-reduce-data-transfer-out-costs)
+    - [Use VPC End-Points for S3 and DynamoDB](#use-vpc-end-points-for-s3-and-dynamodb)
+      - [Use interface endpoints for other services](#use-interface-endpoints-for-other-services)
+    - [Managed services often exempt you from data transfer charges.](#managed-services-often-exempt-you-from-data-transfer-charges)
   - [DynamoDB](#dynamodb)
   - [EBS](#ebs)
   - [EC2](#ec2)
   - [ECS](#ecs)
   - [EKS](#eks)
+  - [Graviton](#graviton)
   - [RDS](#rds)
   - [S3](#s3)
   - [Spot](#spot)
+- [Other Resources](#other-resources)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
   
@@ -73,9 +82,27 @@ Control tower?
 
 ## Data Transfer Out
 
+
+### Analyze  Data Transfer Costs using Cost Explorer
+This blog post goes into more detail.  
+https://aws.amazon.com/blogs/mt/using-aws-cost-explorer-to-analyze-data-transfer-costs/
+
+
+### Use Private IP for Internal Services Communication
+if you deploy ec2 instances in a public subnet, you can choose to have a public IP. If you are communicating between two ec2 instances in the same VPC, make sure to use the private IP so your traffic doesn't leave the AWS network.  
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html
+
+
+### Consider using CloudFront to reduce Data Transfer Out Costs 
+Cloudfront is a bit cheaper and has a free tier. As a side bonus you also get performance benefit. https://aws.amazon.com/about-aws/whats-new/2021/11/aws-price-reduction-data-transfers-internet/
+
+
+### Use VPC End-Points for S3 and DynamoDB
 Avoid the anti pattern of inter service communication going out to the internet and coming back in. Use Gateway endpoints! They are free. 
 https://docs.aws.amazon.com/vpc/latest/privatelink/gateway-endpoints.html
 
+
+#### Use interface endpoints for other services
 For services other than S3 and DynamoDB you need an interface endpoint.
 https://docs.aws.amazon.com/vpc/latest/privatelink/aws-services-privatelink-support.html
 
@@ -85,7 +112,11 @@ And then $0.01 / PB
 
 Look at this if your DTO for interservice communication is higher than this.
 
-It's important to understand what charges you incur for data transfer. This blog explores data transfer costs in relation to RDS. It's worth noting that aside from removing undifferentiated heavy lifting, using managed services also exempts you from certain data transfer charges within a region.
+
+### Managed services often exempt you from data transfer charges.
+It's important to understand what charges you incur for data transfer. It's worth noting that aside from removing undifferentiated heavy lifting, using managed services also exempts you from certain data transfer charges within a region.  
+
+To illustrate this, this blog explores data transfer costs in relation to RDS. 
 https://aws.amazon.com/blogs/architecture/exploring-data-transfer-costs-for-aws-managed-databases/
 
 
