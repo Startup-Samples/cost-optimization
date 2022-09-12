@@ -34,7 +34,6 @@ We hope this proves useful as you navigate the various options available to you 
   - [RDS](#rds)
   - [S3](#s3)
   - [Spot](#spot)
-- [Other Resources](#other-resources)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
   
@@ -46,36 +45,84 @@ We hope this proves useful as you navigate the various options available to you 
 # Useful Tools
 
 ## AWS Budgets
+Get alerted and take action when AWS spend reaches a threshold:
+
+https://aws.amazon.com/aws-cost-management/aws-budgets/
 
 ## Cost Explorer
+Analyze your costs by region, service, tag, and more:
+
+https://aws.amazon.com/aws-cost-management/aws-cost-explorer/
 
 ## Trusted Advisor
+Trusted Advisor gives you automated guidance for cost optimization, detecting under-utilized instances and other areas of improvement:
 
-## Anomaly detection?
+https://aws.amazon.com/premiumsupport/technology/trusted-advisor/
+
+
+## Anomaly detection
+
+AWS Cost Anomaly Detection is an AWS Cost Management feature that uses machine learning to continuously monitor your cost and usage to detect unusual spends. 
+
+https://docs.aws.amazon.com/cost-management/latest/userguide/manage-ad.html
+
+
 
 ## AWS Organizations
 
-Account setup.  
-Control tower?
+(More info coming soon)
+
+Use AWS Accounts as an accounting and security boundary, while keeping centralized billing and security controls using AWS Organizations:
+https://aws.amazon.com/organizations/
+
+This japanese blog post describes how you can use Control Tower to ease multi account setups
+https://aws.amazon.com/jp/blogs/startup/multi-accounts-and-control-tower/
 
 
 
 ## Tagging
+Tagging is a powerful way to organize and allocate costs:
+
+https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html
 
 
+## Pricing Calculator
+Estimate your workload costs ahead of time:
+
+https://calculator.aws/
 
 
+## Cost & Usage Report
+Detailed reports can be scheduled for export as CSV for analysis:
 
+https://aws.amazon.com/aws-cost-management/aws-cost-and-usage-reporting/
+## Well-Architected Framework
+The Well-Architected Framework gives best practice guidance on Cost Optimization and other topics:
 
+https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html
 
+Inside your AWS Console, you can use the Well-Architected Tool to interactively go through the framework's guidance:
+https://aws.amazon.com/well-architected-tool/
+
+Learn more about the Cost Optimization pillar:
+https://aws.amazon.com/products/management-tools/partner-solutions/#Resource_and_Cost_Optimization
+## Cost Optimization Workshop
+To get hands-on with these recommendations, the Activate Next Workshop shows you how to design cost-effective workloads:
+
+https://activate-next.workshop.aws/
 # No Effort Options
 
 
 ## Reserved Instances
+In return for a commitment of 1 or 3 years, AWS offers discounts on EC2 instance usage of up to 75%:
+
+https://aws.amazon.com/aws-cost-management/aws-cost-optimization/reserved-instances/
+
 
 ## Savings Plans
+Benefit from discounts on compute usage, across EC2, Fargate, and Lambda, with Compute Savings Plans:
 
-
+https://aws.amazon.com/savingsplans
 
 
 # AWS Product and Services
@@ -133,7 +180,7 @@ Here's a blog post describing how you can migrate your Amazon EBS volumes from g
 
 ## EC2
 
-Deploy ready to use Instance Scheduler, allowing you to start and stop instances on a schedule to help save costs.
+Deploy the ready-to-use Instance Scheduler, allowing you to start and stop instances on a schedule to help save costs.
 https://aws.amazon.com/solutions/implementations/instance-scheduler/
 
 Consider alternate processors  (often 10% cheaper)
@@ -142,7 +189,11 @@ https://aws.amazon.com/ec2/amd/
 ARM based (up to 40% better price over performance.)  
 https://aws.amazon.com/ec2/graviton/
 
+Use Auto Scaling to use just the compute you need. No need to over-provision for peak load.
+https://aws.amazon.com/autoscaling/
 
+With over 400 instance types available, the Instance Explorer can help you find the right one for your needs:
+https://aws.amazon.com/ec2/instance-explorer/
 
 ## ECS
 ECS Fargate is a highly recommended way for startups to deploy their applications as it  removes undifferentiated heavy lifting of managing instances. This blog post is a cost optimization checklist to help you optimize on cost.
@@ -156,7 +207,7 @@ https://aws.amazon.com/blogs/containers/graceful-shutdowns-with-ecs/
 https://aws.amazon.com/jp/blogs/news/graceful-shutdowns-with-ecs/
 
 
-Container insights is super helpful for gaining visiblity into what your containers are doing. This blog introduces the product and what you can do with it
+Container insights is super helpful for gaining visibility into what your containers are doing. This blog introduces the product and what you can do with it
 https://aws.amazon.com/blogs/mt/introducing-container-insights-for-amazon-ecs/
 
 
@@ -231,6 +282,8 @@ This workshop walks you through S3 Cost optimization tips: https://catalog.us-ea
 
 This blog post will outline how you can optimize for both predictable and dynamic access patterns - https://aws.amazon.com/blogs/storage/amazon-s3-cost-optimization-for-predictable-and-dynamic-access-patterns/
 
+Use the S3 Storage Classes to optimize your storage costs:
+https://aws.amazon.com/s3/storage-classes
 
 ## Spot
 AWS Spot Instances are an amazing option allowing you to take advantage of spare capacity in AWS datacenters to receive up to 90% discounts on your instances. Spot is available to use with EC2 instances directly and also with ECS and EKS. You can learn more here 
@@ -241,8 +294,12 @@ The catch is if AWS needs that spare capacity, you will receive a 2 min warning 
 To learn how you might take advantage of this, you can try yourself in this workshop:
 https://ec2spotworkshops.com/
 
+Learn more about Spot: https://aws.amazon.com/ec2/spot
 
-# Other Resources
 
-Workshops and documentation on various topics.
-https://trailblazing.report/costoptimization.html
+## CloudWatch
+Custom Metrics can be pushed to CloudWatch from your application:
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html
+
+Viewing standard and custom metrics in a CloudWatch dashboard:
+https://catalog.workshops.aws/observability/en-US/metrics/viewmetrics
