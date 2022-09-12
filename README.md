@@ -11,9 +11,13 @@ We hope this proves useful as you navigate the various options available to you 
   - [AWS Budgets](#aws-budgets)
   - [Cost Explorer](#cost-explorer)
   - [Trusted Advisor](#trusted-advisor)
-  - [Anomaly detection?](#anomaly-detection)
+  - [Anomaly detection](#anomaly-detection)
   - [AWS Organizations](#aws-organizations)
   - [Tagging](#tagging)
+  - [Pricing Calculator](#pricing-calculator)
+  - [Cost & Usage Report](#cost--usage-report)
+  - [Well-Architected Framework](#well-architected-framework)
+  - [Cost Optimization Workshop](#cost-optimization-workshop)
 - [No Effort Options](#no-effort-options)
   - [Reserved Instances](#reserved-instances)
   - [Savings Plans](#savings-plans)
@@ -34,6 +38,7 @@ We hope this proves useful as you navigate the various options available to you 
   - [RDS](#rds)
   - [S3](#s3)
   - [Spot](#spot)
+  - [CloudWatch](#cloudwatch)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
   
