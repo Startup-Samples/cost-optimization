@@ -174,6 +174,18 @@ https://aws.amazon.com/blogs/architecture/exploring-data-transfer-costs-for-aws-
 
 
 ## DynamoDB
+How do I optimize costs with Amazon DynamoDB?
+https://aws.amazon.com/premiumsupport/knowledge-center/dynamodb-optimize-costs/
+
+Safely reduce the cost of your unused Amazon DynamoDB tables using on-demand mode
+https://aws.amazon.com/ko/blogs/database/safely-reduce-the-cost-of-your-unused-amazon-dynamodb-tables-using-on-demand-mode/  
+
+
+Amazon DynamoDB auto scaling: Performance and cost optimization at any scale  
+https://aws.amazon.com/blogs/database/amazon-dynamodb-auto-scaling-performance-and-cost-optimization-at-any-scale/
+
+Amazon DynamoDB and Application Auto Scaling https://docs.aws.amazon.com/autoscaling/application/userguide/services-that-can-integrate-dynamodb.html
+
 
 ## EBS
 In general, for almost all workloads, if you are on GP2 you will benefit from moving to GP3.
@@ -199,6 +211,13 @@ https://aws.amazon.com/autoscaling/
 
 With over 400 instance types available, the Instance Explorer can help you find the right one for your needs:
 https://aws.amazon.com/ec2/instance-explorer/
+
+Learn how you can leverage spot through the Amazon EC2 Spot Instance Workshop  
+https://ec2spotworkshops.com/
+
+Learn how AWS Cost Explorer Rightsizing Recommendations Integrates with AWS Compute Optimizer  
+https://aws.amazon.com/ko/blogs/aws-cloud-financial-management/launch-aws-cost-explorer-rightsizing-recommendations-integrates-with-aws-compute-optimizer/
+
 
 ## ECS
 ECS Fargate is a highly recommended way for startups to deploy their applications as it  removes undifferentiated heavy lifting of managing instances. This blog post is a cost optimization checklist to help you optimize on cost.
@@ -255,11 +274,25 @@ This plugin is used to scale in and out the deployments based on time of day. Th
 https://github.com/hjacobs/kube-downscaler
 
 
-
+## Lambda
+- [AWS Lambda - Cost optimization](https://docs.aws.amazon.com/lambda/latest/operatorguide/cost-optimize.html)
+- Optimizing your AWS Lambda costs
+  - [Part 1](https://aws.amazon.com/ko/blogs/compute/optimizing-your-aws-lambda-costs-part-1/)
+  - [Part 2](https://aws.amazon.com/ko/blogs/compute/optimizing-your-aws-lambda-costs-part-2/)
+- [Operating Lambda: Logging and custom metrics](https://aws.amazon.com/ko/blogs/compute/operating-lambda-logging-and-custom-metrics/)
+- [Serverless Optimization Workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/2d960419-7d15-44e7-b540-fd3ebeb7ce2e/)
 
 ## Graviton
 
 github graviton link
+
+## Lambda
+- [AWS Lambda - Cost optimization](https://docs.aws.amazon.com/lambda/latest/operatorguide/cost-optimize.html)
+- Optimizing your AWS Lambda costs
+  - [Part 1](https://aws.amazon.com/ko/blogs/compute/optimizing-your-aws-lambda-costs-part-1/)
+  - [Part 2](https://aws.amazon.com/ko/blogs/compute/optimizing-your-aws-lambda-costs-part-2/)
+- [Operating Lambda: Logging and custom metrics](https://aws.amazon.com/ko/blogs/compute/operating-lambda-logging-and-custom-metrics/)
+- [Serverless Optimization Workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/2d960419-7d15-44e7-b540-fd3ebeb7ce2e/)
 
 
 ## RDS
@@ -308,3 +341,6 @@ https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics
 
 Viewing standard and custom metrics in a CloudWatch dashboard:
 https://catalog.workshops.aws/observability/en-US/metrics/viewmetrics
+
+Reduce log-storage costs by automating retention settings in Amazon CloudWatch  
+https://aws.amazon.com/ko/blogs/infrastructure-and-automation/reduce-log-storage-costs-by-automating-retention-settings-in-amazon-cloudwatch/
