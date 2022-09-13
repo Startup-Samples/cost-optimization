@@ -58,6 +58,10 @@ Analyze your costs by region, service, tag, and more:
 
 https://aws.amazon.com/aws-cost-management/aws-cost-explorer/
 
+make sure to checkout the optimization recommendations  
+https://aws.amazon.com/blogs/aws-cloud-financial-management/launch-resource-optimization-recommendations/
+
+
 ## Trusted Advisor
 Trusted Advisor gives you automated guidance for cost optimization, detecting under-utilized instances and other areas of improvement:
 
@@ -240,8 +244,18 @@ Here's a blog post describing how you can migrate your Amazon EBS volumes from g
 
 ## EC2
 
+Turn off instances you are not using.
+
 Deploy the ready-to-use Instance Scheduler, allowing you to start and stop instances on a schedule to help save costs.
 https://aws.amazon.com/solutions/implementations/instance-scheduler/
+
+Make sure to rightsize your instances. You can manually eyeball from cloudwatch or use helpful tools like Compute Optimizer.  
+https://aws.amazon.com/blogs/aws/aws-compute-optimizer-your-customized-resource-optimization-service/  
+https://aws.amazon.com/blogs/compute/optimizing-ec2-workloads-with-amazon-cloudwatch/  
+https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-right-sizing/identifying-opportunities-to-right-size.html  
+https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-right-sizing/tips-for-right-sizing-your-workloads.html
+
+
 
 Consider alternate processors  (often 10% cheaper)
 https://aws.amazon.com/ec2/amd/
