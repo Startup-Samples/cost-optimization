@@ -135,6 +135,10 @@ Benefit from discounts on compute usage, across EC2, Fargate, and Lambda, with C
 https://aws.amazon.com/savingsplans
 
 
+<br>
+<br>
+
+
 # AWS Product and Services
 
 ## Cloudwatch
@@ -145,6 +149,8 @@ if you are using [Custom Metrics](https://docs.aws.amazon.com/AmazonCloudWatch/l
 https://aws.amazon.com/about-aws/whats-new/2019/11/amazon-cloudwatch-launches-embedded-metric-format/
 The main difference is that EMF doesn't incur a charge when submitting a custom metric.
 
+<br>
+<br>
 
 ## Data Transfer Out
 
