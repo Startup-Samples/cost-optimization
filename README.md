@@ -24,12 +24,6 @@ We hope this proves useful as you navigate the various options available to you 
 - [AWS Product and Services](#aws-product-and-services)
   - [Cloudwatch](#cloudwatch)
   - [Data Transfer Out](#data-transfer-out)
-    - [Analyze Data Transfer Costs using Cost Explorer](#analyze-data-transfer-costs-using-cost-explorer)
-    - [Use Private IP for Internal Services Communication](#use-private-ip-for-internal-services-communication)
-    - [Use VPC End-Points for S3 and DynamoDB](#use-vpc-end-points-for-s3-and-dynamodb)
-      - [Use interface endpoints for other services](#use-interface-endpoints-for-other-services)
-    - [Consider using CloudFront to reduce Data Transfer Out Costs](#consider-using-cloudfront-to-reduce-data-transfer-out-costs)
-    - [Managed services often exempt you from data transfer charges.](#managed-services-often-exempt-you-from-data-transfer-charges)
   - [DynamoDB](#dynamodb)
     - [Application auto scaling](#application-auto-scaling)
     - [Storage-IA table class](#storage-ia-table-class)
@@ -150,39 +144,37 @@ The main difference is that EMF doesn't incur a charge when submitting a custom 
 
 ## Data Transfer Out
 
-### Analyze Data Transfer Costs using Cost Explorer
+- Analyze Data Transfer Costs using Cost Explorer
 This blog post goes into more detail.  
 https://aws.amazon.com/blogs/mt/using-aws-cost-explorer-to-analyze-data-transfer-costs/
 
 
-### Use Private IP for Internal Services Communication
+- Use Private IP for Internal Services Communication  
 if you deploy ec2 instances in a public subnet, you can choose to have a public IP. If you are communicating between two ec2 instances in the same VPC, make sure to use the private IP so your traffic doesn't leave the AWS network.  
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html
 
 
-### Use VPC End-Points for S3 and DynamoDB
+- Use VPC End-Points for S3 and DynamoDB  
 Avoid the anti pattern of inter service communication going out to the internet and coming back in. Use Gateway endpoints! They are free. 
 https://docs.aws.amazon.com/vpc/latest/privatelink/gateway-endpoints.html
 
 
-#### Use interface endpoints for other services
-For services other than S3 and DynamoDB you need an interface endpoint.
-https://docs.aws.amazon.com/vpc/latest/privatelink/aws-services-privatelink-support.html
+  - Use interface endpoints for other services.  
+    For services other than S3 and DynamoDB you need an interface endpoint.
+    https://docs.aws.amazon.com/vpc/latest/privatelink/aws-services-privatelink-support.html  
+    https://aws.amazon.com/privatelink/pricing/  
+    Min charge is 0.013 * 730 = $9.49
+    And then $0.01 / PB
+      
+    Look at this if your DTO for interservice communication is higher than this.
 
-https://aws.amazon.com/privatelink/pricing/
-Min charge is 0.013 * 730 = $9.49
-And then $0.01 / PB
-
-Look at this if your DTO for interservice communication is higher than this.
-
-### Consider using CloudFront to reduce Data Transfer Out Costs 
+- Consider using CloudFront to reduce Data Transfer Out Costs  
 Cloudfront is a bit cheaper and has a free tier. As a side bonus you also get performance benefit. https://aws.amazon.com/about-aws/whats-new/2021/11/aws-price-reduction-data-transfers-internet/
 
 
 
-### Managed services often exempt you from data transfer charges.
+- Managed services often exempt you from data transfer charges.  
 It's important to understand what charges you incur for data transfer. It's worth noting that aside from removing undifferentiated heavy lifting, using managed services also exempts you from certain data transfer charges within a region.  
-
 To illustrate this, this blog explores data transfer costs in relation to RDS. 
 https://aws.amazon.com/blogs/architecture/exploring-data-transfer-costs-for-aws-managed-databases/
 
@@ -259,14 +251,14 @@ https://aws.amazon.com/ec2/graviton/
 
 (more on [graviton below](#graviton))
 
+Learn how to leverage [Spot in the section below](#spot)
+
 Use Auto Scaling to use just the compute you need. No need to over-provision for peak load.
 https://aws.amazon.com/autoscaling/
 
 With over 400 instance types available, the Instance Explorer can help you find the right one for your needs:
 https://aws.amazon.com/ec2/instance-explorer/
 
-Learn how you can leverage spot through the Amazon EC2 Spot Instance Workshop  
-https://ec2spotworkshops.com/
 
 Learn how AWS Cost Explorer Rightsizing Recommendations Integrates with AWS Compute Optimizer  
 https://aws.amazon.com/ko/blogs/aws-cloud-financial-management/launch-aws-cost-explorer-rightsizing-recommendations-integrates-with-aws-compute-optimizer/
