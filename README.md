@@ -116,10 +116,17 @@ https://aws.amazon.com/well-architected-tool/
 
 Learn more about the Cost Optimization pillar:
 https://aws.amazon.com/products/management-tools/partner-solutions/#Resource_and_Cost_Optimization
+
+
 ## Cost Optimization Workshop
 To get hands-on with these recommendations, the Activate Next Workshop shows you how to design cost-effective workloads:
 
 https://activate-next.workshop.aws/
+
+
+<br>
+<br>
+
 # No Effort Options
 
 
